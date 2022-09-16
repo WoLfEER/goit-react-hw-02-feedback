@@ -1,6 +1,8 @@
 import React from 'react';
 import { SectionWrap, Title } from './Section.module';
 
+import PropTypes from 'prop-types';
+
 export const Section = ({ title = '', children }) => {
   return (
     <SectionWrap>
@@ -8,4 +10,9 @@ export const Section = ({ title = '', children }) => {
       <div>{children}</div>
     </SectionWrap>
   );
+};
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node,
 };
