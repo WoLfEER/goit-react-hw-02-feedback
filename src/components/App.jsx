@@ -12,7 +12,6 @@ export class App extends Component {
   };
 
   onLeaveFeedback = e => {
-    console.log(e);
     const selectedFeedback = e.target.value;
     this.setState(prevState => ({
       [selectedFeedback]: prevState[selectedFeedback] + 1,
